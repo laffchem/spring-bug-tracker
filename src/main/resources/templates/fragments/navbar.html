@@ -1,0 +1,47 @@
+  <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid py-4" th:fragment="navbar">
+<div class="container" >
+
+    <a class="navbar-brand brand fw-bold tight-letter-spacing fs-4" href="#">Bug-Tracker</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item normal-text tight-letter-spacing">
+          <a class="nav-link" href="#">Organization</a>
+        </li>
+        <li class="nav-item normal-text tight-letter-spacing">
+          <a class="nav-link" href="#">Projects</a>
+        </li>
+        <li class="nav-item normal-text tight-letter-spacing">
+          <a class="nav-link" href="#">Bugs</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav d-flex">
+        <li class="nav-item normal-text me-2 tight-letter-spacing">
+
+          <a href="#"
+             hx-get="register"
+             hx-target="#app"
+             hx-trigger="click"
+             hx-swap="innerHTML"
+             class="nav-link">
+            Register
+          </a>
+        </li>
+        <li class="nav-item normal-text tight-letter-spacing">
+          <a href="#" class="nav-link"
+             hx-get="login"
+             hx-trigger="click"
+          hx-target="#app"
+          hx-swap="innerHTML">
+            Login
+          </a>
+        </li>
+      </ul>
+    </div>
+
+</div>
+</nav>

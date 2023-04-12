@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="~{base/base :: head}"></head>
+<body>
+<header class="mb-5" th:insert="~{fragments/navbar :: navbar}"></header>
+<main class="py-5" th:fragment="content">
+  <div class="container mb-5 text-center">
+    <div id="app" class="container-fluid" hx-boost="true">
+<!--  All the swaps go in here. -->
+    </div>
+  </div>
+</main>
+</body>
+</html>
