@@ -27,7 +27,7 @@ public class BugServiceImpl implements BugService {
     }
 
     @Override
-    public List<BugDto> findAllBugs(BugDto bugDto) {
+    public List<BugDto> findAllBugs() {
         List<Bug> bugs = bugRepository.findAll();
         return bugs.stream().map((bug) -> mapToBugDto(Optional.ofNullable(bug))).collect(Collectors.toList());
     }

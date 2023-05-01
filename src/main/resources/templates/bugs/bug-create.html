@@ -1,0 +1,34 @@
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout}">
+<head>
+  <title>Create Bug Ticket</title>
+</head>
+<section layout:fragment="body">
+  <div class="w-50 mx-auto my-5">
+    <form role="form" method="post" th:action="@{/bugs/{projectId}(projectId=${projectId})}" th:object="${bug}">
+      <h1 class="h3 mb-3 fw-normal">Describe the bug.</h1>
+      <div class="form-floating">
+        <input type="text"
+               class="form-control my-2"
+               id="floatingTitle"
+               name="floatingTitle"
+               placeholder="Enter bug details."
+               th:field="*{title}">
+        <label for="floatingTitle">Title</label>
+      </div>
+      <div class="form-floating">
+        <input type="text"
+               class="form-control my-2"
+               id="floatingDescription"
+               name="floatingDescription"
+               placeholder="Enter a short description"
+               th:field="*{description}">
+        <label for="floatingDescription">Description</label>
+      </div>
+      <button class="w-50 btn mx-auto btn-info btn-lg my-2" type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+</html>

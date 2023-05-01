@@ -1,0 +1,29 @@
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout}">
+<head>
+    <title>Organizations</title>
+</head>
+<section layout:fragment="body">
+    <div class="w-50 mx-auto my-5" th:fragment="projects">
+        <h2 class="fs-1 my-5 text-center">Organizations</h2>
+        <table class="table text-center align-middle">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="organization :${organizations}">
+                <th scope="row" th:text="${organization.id}"></th>
+                <td th:text="${organization.name}" th:href="@{/}"></td>
+
+            </tbody>
+        </table>
+    </div>
+</section>
+</html>

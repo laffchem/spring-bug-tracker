@@ -26,7 +26,7 @@ public class Organization {
     private String name;
 
 
-    @OneToMany(mappedBy = "organization")
+    @OneToMany(mappedBy = "organization", cascade = CascadeType.ALL)
     private List<Project> projects;
 
 }
